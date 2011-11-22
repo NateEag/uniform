@@ -97,7 +97,7 @@ Enjoy!
 
       btnText = btnText == "" ? $el.is(":reset") ? "Reset" : "Submit" : btnText;
 
-      spanTag.html(btnText);
+      spanTag.text(btnText);
 
       $el.css("opacity", 0);
       $el.wrap(divTag);
@@ -170,7 +170,7 @@ Enjoy!
       if(selected.length == 0){
         selected = elem.find("option:first");
       }
-      spanTag.html(selected.text());
+      spanTag.text(selected.text());
 
       elem.css('opacity', 0);
       elem.wrap(divTag);
@@ -566,7 +566,7 @@ Enjoy!
           divTag.removeClass(options.hoverClass+" "+options.focusClass+" "+options.activeClass);
 
           //reset current selected text
-          spanTag.html($e.find(":selected").text());
+          spanTag.text($e.find(":selected").text());
 
           if($e.is(":disabled")){
             divTag.addClass(options.disabledClass);
